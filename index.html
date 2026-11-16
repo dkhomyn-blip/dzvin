@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#030204">
 <meta name="robots" content="noindex, nofollow">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Дзвін">
@@ -333,9 +333,9 @@ const Intro = (() => {
 
   function load(){
     atlas.night.onload = atlas.lit.onload = () => { atlas.ready++; if (atlas.ready >= 2){ cached.clear(); update(); } };
-    atlas.night.src = 'assets/t_p_atlas_night.webp'; atlas.lit.src = 'assets/t_p_atlas_lit.webp';
-    glowImg.src = 'assets/t_p_glow.webp'; nightImg.src = 'assets/t_p_night.webp';
-    litCross.src = litSpot.src = litFull.src = 'assets/t_p_lit.webp'; haloImg.src = 'assets/t_p_litglow.webp';
+    atlas.night.src = 't_p_atlas_night.webp'; atlas.lit.src = 't_p_atlas_lit.webp';
+    glowImg.src = 't_p_glow.webp'; nightImg.src = 't_p_night.webp';
+    litCross.src = litSpot.src = litFull.src = 't_p_lit.webp'; haloImg.src = 't_p_litglow.webp';
     litCross.style.webkitMaskImage = litCross.style.maskImage = `url(${M.mask})`;
   }
 

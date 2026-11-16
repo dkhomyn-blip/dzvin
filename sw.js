@@ -1,6 +1,6 @@
 /* «Дзвін»: офлайн-кеш. Версія кешу = хеш файлів, тож після нового викладення застосунок оновиться сам. */
-const CACHE = 'dzvin-75cc9d238c';
-const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icons/apple-touch-icon.png', 'icons/favicon-32.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png', 'assets/t_p_atlas_lit.webp', 'assets/t_p_atlas_night.webp', 'assets/t_p_glow.webp', 'assets/t_p_lit.webp', 'assets/t_p_litglow.webp', 'assets/t_p_night.webp'];
+const CACHE = 'dzvin-299881958e';
+const FILES = ['./', 'index.html', 'manifest.webmanifest', 'apple-touch-icon.png', 'favicon-32.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 't_p_atlas_lit.webp', 't_p_atlas_night.webp', 't_p_glow.webp', 't_p_lit.webp', 't_p_litglow.webp', 't_p_night.webp'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
